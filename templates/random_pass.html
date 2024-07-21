@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <title>Random Password</title>
+{% endblock %}
+
+{% block nav %}
+    <nav>
+        <ul>
+            <div class="container">
+                <li><a href="/">Hello, World</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/random_fact">Random fact</a></li>
+                <li><a href="/random_pass" class="active">Random Password</a></li>
+            </div>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <h1>Random Pass!</h1>
+    <p>Password acakmu = {{ password }}</p>
+{% endblock %}

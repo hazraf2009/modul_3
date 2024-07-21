@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <title>Random Facts!</title>
+{% endblock %}
+
+{% block nav %}
+    <nav>
+        <ul>
+            <div class="container">
+                <li><a href="/">Hello, World</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/random_fact" class="active">Random fact</a></li>
+                <li><a href="/random_pass">Random Password</a></li>
+            </div>
+        </ul>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <h1>Random Facts!</h1>
+    <p>{{ fact }}</p>
+{% endblock %}

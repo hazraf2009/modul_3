@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block head %}
+    <title>About</title>
+{% endblock %}
+
+{% block nav %}
+<nav>
+    <ul>
+        <div class="container">
+            <li><a href="/">Hello, World</a></li>
+            <li><a href="/about" class="active">About</a></li>
+            <li><a href="/random_fact">Random fact</a></li>
+            <li><a href="/random_pass">Random Password</a></li>
+        </div>
+    </ul>
+</nav>
+{% endblock %}
+
+{% block body %}
+    <h1>About</h1>
+    <p>Ini adalah website untuk belajar flask</p>
+{% endblock %}

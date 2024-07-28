@@ -55,6 +55,9 @@ def submit_form():
     address = request.form['address']
     date = request.form['date']
 
+    with open('form.txt', 'a',) as f:
+        f.write('Name : ' + name + '\nEmail : ' + email + '\nAddress : ' + address + '\nDate : ' + date + '\n\n')
+            
     # Anda dapat menyimpan data Anda atau mengirimkannya melalui email
     return render_template('form_result.html', 
                            # Tempatkan variabel di sini

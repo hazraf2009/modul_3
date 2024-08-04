@@ -60,11 +60,7 @@ def submit_form():
             
     # Anda dapat menyimpan data Anda atau mengirimkannya melalui email
     return render_template('form_result.html', 
-                           # Tempatkan variabel di sini
-                           name=name,
-                           email=email,
-                           address=address,
-                           date = date
+                           
                            )
 
 

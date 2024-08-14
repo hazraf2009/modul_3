@@ -8,30 +8,34 @@ app = Flask(__name__)
 @app.route('/', methods=['GET','POST'])
 def index():
     if request.method == 'POST':
-        # mendapatkan gambar yang dipilih
+        # mendapatkan gambar yang dipili
         selected_image = request.form.get('image-selector')
 
         # Tugas #2. Menerima teks
-        
+        text_top = request.form.get("textTop")
+        text_bottom = request.form.get("textBottom")
 
         # Tugas #3. Menerima posisi teks
-       
-
+        textTop_position = request.form.get("textTop_y")
+        textBottom_position = request.form.get("textBottom_y")
         # Tugas #3. Menerima warna teks
+        text_color = request.form.get("color-selector")
         
 
         return render_template('index.html', 
                                # Menampilkan gambar yang dipilih
-                               selected_image=selected_image, 
+                                selected_image=selected_image, 
 
                                # Tugas #2. Menampilkan teks
-                               
+                                text_top=text_top,
+                                text_bottom=text_bottom,
 
                                # Tugas #3. Menampilkan warna
-                               
+                                text_color=text_color,
                                
                                # Tugas #3. Menampilkan posisi teks
-
+                                textTop_position=textTop_position,
+                                textBottom_position=textBottom_position
                                )
     else:
         # Menampilkan gambar pertama secara default
